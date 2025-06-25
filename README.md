@@ -199,4 +199,14 @@ Sequence diagram:
 ![image](https://github.com/user-attachments/assets/7f747250-ca8f-4441-b304-4625a1e0b13f)
 
 
+## 🙏 Acknowledgements
+
+This project was inspired and built upon the excellent work by [Devansh-47](https://github.com/Devansh-47/Sign-Language-To-Text-and-Speech-Conversion).  
+Special thanks to the video tutorial by [ROCKY 007 on YouTube](https://www.youtube.com/watch?v=UHY9PzjS7O8) for the visual walkthrough.
+
+Their contributions helped me understand and implement real-time sign language recognition using OpenCV, Keras, and pyttsx3.
+
+Please check out and support their work!
+
+
 
