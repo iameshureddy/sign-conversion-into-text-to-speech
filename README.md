@@ -4,7 +4,7 @@ ABSTRACT:
 
 Sign language is one of the oldest and most natural form of language for communication, hence we have come up with a real time method using neural networks for finger spelling based American sign language. Automatic human gesture recognition from camera images is an interesting topic for developing vision. We propose a convolution neural network (CNN) method to recognize hand gestures of human actions from an image captured by camera. The purpose is to recognize hand gestures of human task activities from a camera image. The position of hand and orientation are applied to obtain the training and testing data for the CNN. The hand is first passed through a filter and after the filter is applied where the hand is passed through a classifier which predicts the class of the hand gestures. Then the calibrated images are used to train CNN.
 
-The Final Outcome Of Our Project...
+The Final Outcome our my Project...
 ![Screenshot (160)](https://github.com/user-attachments/assets/55576799-c9a0-41bb-9d12-7a48e2927a4b)
 Introduction:
 
@@ -12,7 +12,8 @@ American sign language is a predominant sign language Since the only disability 
 
 In our project we basically focus on producing a model which can recognise Fingerspelling based hand gestures in order to form a complete word by combining each gesture. The gestures we aim to train are as given in the image below.
 
-Spanish_SL
+![image](https://github.com/user-attachments/assets/d0255c84-a488-4bc2-ba73-51f0978ecc38)
+
 
 Requirements:
 
@@ -36,7 +37,8 @@ It uses electromechanical devices to provide exact hand configuration, and posit
 
 In vision-based methods, the computer webcam is the input device for observing the information of hands and/or fingers. The Vision Based methods require only a camera, thus realizing a natural interaction between humans and computers without the use of any extra devices, thereby reducing costs. The main challenge of vision-based hand detection ranges from coping with the large variability of the human hand’s appearance due to a huge number of hand movements, to different skin-color possibilities as well as to the variations in viewpoints, scales, and speed of the camera capturing the scene.
 
-Screenshot (224)
+![image](https://github.com/user-attachments/assets/4e88561f-53fe-40dc-9cb6-a7db7bb2fd08)
+
 
 Data pre-processing and Feature extraction:
 
@@ -44,34 +46,34 @@ In this approach for hand detection, firstly we detect hand from image that is a
 
 We have collected images of different signs of different angles for sign letter A to Z.
 
-fdfScreenshot (227)
+![image](https://github.com/user-attachments/assets/5ca6261d-38b3-463b-992d-897aa08a202c)
+
 
 in this method there are many loop holes like your hand must be ahead of clean soft background and that is in proper lightning condition then only this method will give good accurate results but in real world we dont get good background everywhere and we don’t get good lightning conditions too.
 So to overcome this situation we try different approaches then we reached at one interesting solution in which firstly we detect hand from frame using mediapipe and get the hand landmarks of hand present in that image then we draw and connect those landmarks in simple white image
 
 Mediapipe Landmark System:
 
-2410344
+![image](https://github.com/user-attachments/assets/1ab72bad-2edd-4efa-947a-0baf76398935)
+![image](https://github.com/user-attachments/assets/f2b8a634-1527-42d0-8924-9b067e503f2f)
+![image](https://github.com/user-attachments/assets/4a454993-26eb-487c-9a8c-d88df3870d13)
+![image](https://github.com/user-attachments/assets/cd44af6e-6f99-47ee-b2d0-364c018f7d63)
+![image](https://github.com/user-attachments/assets/d9eed9f2-c382-4038-9cc3-17b4eb246f55)
+![image](https://github.com/user-attachments/assets/cf3ee907-e160-44f5-9aa2-3adcc2b53444)
+![image](https://github.com/user-attachments/assets/4279a984-86b2-448c-95a4-21a94be3a259)
+![image](https://github.com/user-attachments/assets/2645b801-2850-40f7-bf0a-729475eef50c)
+![image](https://github.com/user-attachments/assets/be4fbeb2-5329-439f-b06b-f206dc2a820f)
 
-a12
 
-a23
-
-7
-
-b11
-
-b16
-
-127
 
 Now we get this landmark points and draw it in plain white background using opencv library
 
 -By doing this we tackle the situation of background and lightning conditions because the mediapipe labrary will give us landmark points in any background and mostly in any lightning conditions.
 
-2022-10-31 2022-10-31 (1)
+![image](https://github.com/user-attachments/assets/26bb3fba-34e1-4f6c-a0d8-b21c686698d5)
+![image](https://github.com/user-attachments/assets/7b11703d-259d-4614-b683-d64d0b8bc258)
+![image](https://github.com/user-attachments/assets/388d4536-1885-4887-9e25-84075361b63f)
 
-hhee2022-10-31 (2)
 
 -we have collected 180 skeleton images of Alphabets from A to Z
 
@@ -98,6 +100,7 @@ The layer consists of learnable filters of window size. During every iteration I
 As I continue this process well create a 2-Dimensional activation matrix that gives the response of that matrix at every spatial position.
 
 That is, the network will learn filters that activate when they see some type of visual feature such as an edge of some orientation or a blotch of some colour. cnn
+![image](https://github.com/user-attachments/assets/266363cf-ca84-4f2d-9064-c24cd74a51cf)
 
 Pooling Layer:
 
@@ -116,10 +119,13 @@ b. Average Pooling:
 In average pooling we take average of all Values in a window.
 
 pooling
+![image](https://github.com/user-attachments/assets/ad950f71-5618-4da2-990b-6f9947182d78)
 
-pooling
+
 
 Fully Connected Layer:
+![image](https://github.com/user-attachments/assets/faa0f627-db71-49ac-92e1-f4a28b9b9b4c)
+
 
 In convolution layer neurons are connected only to a local region, while in a fully connected region, well connect the all the inputs to neurons.
 
@@ -149,7 +155,7 @@ So when model will classify [aemnst] in one single class using mathematical oper
 
 -Finally, we got 97% Accuracy (with and without clean background and proper lightning conditions) through our method. And if the background is clear and there is good lightning condition then we got even 99% accurate results
 
-2022-11-01 (2) 2022-11-01 (3) 2022-11-01 (4) 2022-11-01 (5)
+
 
 Text To Speech Translation:
 
@@ -174,17 +180,23 @@ Python libraries: OpenCV, NumPy, Keras,mediapipe,Tensorflow
 System Diagrams:
 
 System Flowchart:
+![image](https://github.com/user-attachments/assets/567f4d6f-b7b2-4a7f-a917-c75184858f7e)
+
 
 system flowchart
 
 Use-case diagram:
+![image](https://github.com/user-attachments/assets/b9978b40-8032-4844-8455-3a7de38f7ead)
 
-Untitled Diagram drawio
+
 
 DFD diagram:
+![image](https://github.com/user-attachments/assets/0f45ae08-7c1a-4a44-8d90-04a021e75aca)
+![image](https://github.com/user-attachments/assets/4cb91263-65bd-49a8-820e-b959c2a10832)
 
-Flowcharts (2) Flowcharts (1)
 
 Sequence diagram:
+![image](https://github.com/user-attachments/assets/7f747250-ca8f-4441-b304-4625a1e0b13f)
 
-sequence2
+
+
